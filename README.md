@@ -11,10 +11,10 @@ SQL son las siglas en inglés de Structured Query Language, que se traduce al es
 SQL está compuesto por cuatro subconjuntos de comandos: DML, DDL, DCL y TCL. El subconjunto más utilizado es el DML.
 DML significa Data Manipulation Language (Lenguaje de Manipulación de Datos). Este conjunto de comandos se utiliza para consultar y modificar los datos almacenados en las tablas de una base de datos, lo que lo convierte en el más usado en el día a día del trabajo con bases de datos.
 Los principales comandos de DML son:
-    - SELECT: para consultar datos de una tabla
-    - INSERT: para insertar nuevos registros
-    - UPDATE: para actualizar datos existentes
-    - DELETE: para eliminar registros
+- SELECT: para consultar datos de una tabla
+- INSERT: para insertar nuevos registros
+- UPDATE: para actualizar datos existentes
+- DELETE: para eliminar registros
 En este curso nos enfocaremos exclusivamente en el comando SELECT y en todo lo que se puede lograr con él.
 
 #### Glosario

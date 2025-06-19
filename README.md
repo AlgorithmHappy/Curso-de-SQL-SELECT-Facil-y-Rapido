@@ -31,6 +31,8 @@ SELECT email FROM usuarios;
 
 SELECT nombre, email FROM usuarios;
 -- Si deseas consultar varias columnas puedes separar por coma cada una de las columnas que quieras.
+
+-- Si quisieramos traducir estas linea a lenguaje humano yo las traduciria asi "Selecciona la columna email desde la tabla usuarios"
 ```
 
 #### Variante
@@ -38,8 +40,12 @@ SELECT nombre, email FROM usuarios;
 SELECT * FROM usuarios;
 -- Con el "*" indicas que quieres mostrar todas las columnas de dicha tabla, en este caso "usuarios"
 ```
+
 ### Notas:
 **Nota:** Las sentencias utilizadas pueden ser en mayusculas o en minusculas
+
+**Nota:** Es importante contar con los permisos adecuados sobre las tablas a las que se les aplica una sentencia SELECT, ya que podrían estar restringidas y provocar el siguiente error: "
+ORA-00942: table or view does not exist"
 
 ### Ejercicios:
 1. Consulta todos los datos de la tabla "CURSOS"

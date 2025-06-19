@@ -18,46 +18,48 @@ Los principales comandos de DML son:
 En este curso nos enfocaremos exclusivamente en el comando SELECT y en todo lo que se puede lograr con él.
 
 #### Glosario
-    - Lenguaje de programacion: Un lenguaje de programación es una herramienta que permite a los seres humanos "comunicarse" con una computadora para darle instrucciones. Estas instrucciones pueden utilizarse para crear software (aplicaciones) que pueden ser usados por personas a través de distintos dispositivos.
-    - Declarativo: Es un tipo de lenguaje de programación cuyo enfoque está en describir lo que se quiere lograr, en lugar de explicar cómo hacerlo paso a paso. En otras palabras, su semántica se basa en el "qué" se desea obtener, no en el "cómo" se debe ejecutar.
-    - Comando: Es la instrucción más básica que se le puede dar a una computadora para que realice una acción específica.
-    - Base de datos: Es un software (aplicacion) que permite la gestion de una gran cantidad de datos.
+- Lenguaje de programacion: Un lenguaje de programación es una herramienta que permite a los seres humanos "comunicarse" con una computadora para darle instrucciones. Estas instrucciones pueden utilizarse para crear software (aplicaciones) que pueden ser usados por personas a través de distintos dispositivos.
+- Declarativo: Es un tipo de lenguaje de programación cuyo enfoque está en describir lo que se quiere lograr, en lugar de explicar cómo hacerlo paso a paso. En otras palabras, su semántica se basa en el "qué" se desea obtener, no en el "cómo" se debe ejecutar.
+- Comando: Es la instrucción más básica que se le puede dar a una computadora para que realice una acción específica.
+- Base de datos: Es un software (aplicacion) que permite la gestion de una gran cantidad de datos.
 
 ### Primera consulta
 La consulta mas basica que se puede realizar es:
-
+```sql
 SELECT email FROM usuarios;
 -- La palabra "SELECT" indica las columnas que quieres de la tabla, con el "FROM" indicas que tabla de la base de datos quieres y con el ";" indicas que hasta ahi acaba la instruccion.
 
 SELECT nombre, email FROM usuarios;
 -- Si deseas consultar varias columnas puedes separar por coma cada una de las columnas que quieras.
+```
 
 #### Variante
+```sql
 SELECT * FROM usuarios;
 -- Con el "*" indicas que quieres mostrar todas las columnas de dicha tabla, en este caso "usuarios"
-
+```
 ### Notas:
-== Las sentencias utilizadas pueden ser en mayusculas o en minusculas ==
+**Nota:** Las sentencias utilizadas pueden ser en mayusculas o en minusculas
 
 ### Ejercicios:
-    1. Consulta todos los datos de la tabla "CURSOS"
-    2. Consulta las columnas "BIOGRAFIA" y "SITIO_WEB" de la tabla "PERFILES"
-    3. ¿Que columnas tiene la tabla "INSCRIPCIONES"?
-    4. ¿Que cursos existen en la base de datos?
+1. Consulta todos los datos de la tabla "CURSOS"
+2. Consulta las columnas "BIOGRAFIA" y "SITIO_WEB" de la tabla "PERFILES"
+3. ¿Que columnas tiene la tabla "INSCRIPCIONES"?
+4. ¿Que cursos existen en la base de datos?
 
 ## Tema 2: Sentencia "WHERE"
 WHERE es una cláusula que se utiliza para filtrar filas en una consulta SQL con SELECT. Esta cláusula permite establecer condiciones específicas para mostrar únicamente los registros que cumplan ciertos criterios.
 Para realizar estas filtraciones, WHERE emplea operadores de comparación, que se describen a continuación:
-    - = : Filtra los datos que sean iguales al valor especificado.
-    - < : Filtra los datos que sean menores que el valor especificado.
-    - > : Filtra los datos que sean mayores que el valor especificado.
-    - <= : Filtra los datos que sean menores o iguales al valor especificado.
-    - >= : Filtra los datos que sean mayores o iguales al valor especificado.
-    - != o <> : Filtra los datos que sean diferentes al valor especificado.
+- = : Filtra los datos que sean iguales al valor especificado.
+- < : Filtra los datos que sean menores que el valor especificado.
+- > : Filtra los datos que sean mayores que el valor especificado.
+- <= : Filtra los datos que sean menores o iguales al valor especificado.
+- >= : Filtra los datos que sean mayores o iguales al valor especificado.
+- != o <> : Filtra los datos que sean diferentes al valor especificado.
 
 ### Consultas
 Las consultas que se pueden realizar con esto son:
-
+```sql
 SELECT * FROM CATEGORIAS WHERE id = 1;
 -- Aqui se esta filtrando los renglones cuyo dato "ID" sea igual a 1
 
@@ -70,6 +72,7 @@ SELECT * FROM CATEGORIAS WHERE id < 3;
 SELECT * FROM CATEGORIAS WHERE id != 3;
 SELECT * FROM CATEGORIAS WHERE id <> 3;
 -- En estas 2 consultas se filtran los renglones cuyo dato "ID" es diferente a 3
+```
 
 #### Uso de textos o (strings)
 Si se desea comparar datos de tipo cadena de texto (strings), es necesario encerrar los valores entre comillas simples (' ').

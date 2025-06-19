@@ -90,8 +90,10 @@ SELECT * FROM CATEGORIAS WHERE NOMBRE <> 'Programación';
 ```
 ### Notas:
 **Nota:** En los datos de tipo texto "strings" si son sensibles a mayusculas y minusculas.
+
 **Nota:** Los datos numericos con punto decimal son tratados igual que los numericos normales.
-**Nota:** Los datos de tipo fecha (date) se explicaran mas adelante
+
+**Nota:** Los datos de tipo fecha (date) se explicaran mas adelante.
 
 ### Ejercisios:
 1. ¿Quien es el usuario con el id 2?

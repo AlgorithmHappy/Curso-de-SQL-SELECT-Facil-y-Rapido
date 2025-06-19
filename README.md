@@ -52,9 +52,9 @@ WHERE es una cláusula que se utiliza para filtrar filas en una consulta SQL con
 Para realizar estas filtraciones, WHERE emplea operadores de comparación, que se describen a continuación:
 - = : Filtra los datos que sean iguales al valor especificado.
 - < : Filtra los datos que sean menores que el valor especificado.
-- > : Filtra los datos que sean mayores que el valor especificado.
+- \> : Filtra los datos que sean mayores que el valor especificado.
 - <= : Filtra los datos que sean menores o iguales al valor especificado.
-- >= : Filtra los datos que sean mayores o iguales al valor especificado.
+- \>= : Filtra los datos que sean mayores o iguales al valor especificado.
 - != o <> : Filtra los datos que sean diferentes al valor especificado.
 
 ### Consultas
@@ -76,7 +76,7 @@ SELECT * FROM CATEGORIAS WHERE id <> 3;
 
 #### Uso de textos o (strings)
 Si se desea comparar datos de tipo cadena de texto (strings), es necesario encerrar los valores entre comillas simples (' ').
-
+```sql
 SELECT * FROM CATEGORIAS WHERE NOMBRE = 'Programación';
 -- Aqui se esta filtrando los renglones que en cuyo dato "NOMBRE" sea igual que el texto 'Programación'
 
@@ -87,26 +87,23 @@ SELECT * FROM CATEGORIAS WHERE NOMBRE = 'Programación';
 SELECT * FROM CATEGORIAS WHERE NOMBRE != 'Programación';
 SELECT * FROM CATEGORIAS WHERE NOMBRE <> 'Programación';
 -- Los demas operadores se trabajan igual que con los numeros
-
+```
 ### Notas:
-== En los datos de tipo texto "strings" si son sensibles a mayusculas y minusculas, los datos numericos con punto decimal son tratados igual que los numericos normales. Los datos
-de tipo fecha (date) se explicaran mas adelante ==
+**Nota:** En los datos de tipo texto "strings" si son sensibles a mayusculas y minusculas.
+**Nota:** Los datos numericos con punto decimal son tratados igual que los numericos normales.
+**Nota:** Los datos de tipo fecha (date) se explicaran mas adelante
 
 ### Ejercisios:
-    1. ¿Quien es el usuario con el id 2?
-    2. ¿Cuales son los usuarios con id mayor a 1?
-    3. ¿Que id tiene la categoria "Diseño"?
-    4. ¿En orden alfabetico por nombre de usuario quien es menor a 'Carlos Méndez'?
-    5. ¿Cuales son los cursos del usuario con id 1?
-    6. ¿Que consulta harias para mostrar el "CURSO_ID" 1 Y 3?
-    
-    
-
-
+1. ¿Quien es el usuario con el id 2?
+2. ¿Cuales son los usuarios con id mayor a 1?
+3. ¿Que id tiene la categoria "Diseño"?
+4. ¿En orden alfabetico por nombre de usuario quien es menor a 'Carlos Méndez'?
+5. ¿Cuales son los cursos del usuario con id 1?
+6. ¿Que consulta harias para mostrar el "CURSO_ID" 1 Y 3?
 
 ## Base de datos utilizada:
-== Nota: Ejecutar linea por linea, es decir desde que inicia la instruccion hasta donde esta el ";" ==
-
+**Nota:** Ejecutar linea por linea, es decir desde que inicia la instruccion hasta donde esta el ";"
+```sql
 -- Crear secuencias para las claves primarias
 CREATE SEQUENCE seq_usuarios START WITH 1 INCREMENT BY 1;
 CREATE SEQUENCE seq_perfiles START WITH 1 INCREMENT BY 1;
@@ -231,3 +228,4 @@ INSERT INTO cursos_categorias (curso_id, categoria_id) VALUES (3, 3);
 INSERT INTO inscripciones (usuario_id, curso_id, fecha_inscripcion) VALUES (2, 1, TO_DATE('2025-06-01', 'YYYY-MM-DD') );
 INSERT INTO inscripciones (usuario_id, curso_id, fecha_inscripcion) VALUES (3, 1, TO_DATE('2025-06-02', 'YYYY-MM-DD'));
 INSERT INTO inscripciones (usuario_id, curso_id, fecha_inscripcion) VALUES (3, 2, TO_DATE('2025-06-03', 'YYYY-MM-DD'));
+```

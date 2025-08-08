@@ -1,0 +1,20 @@
+version: "3.9"
+services:
+  oracle-db:
+    image: gvenzl/oracle-free:latest
+    container_name: oracle-db
+    ports:
+      - "1521:1521"  # Puerto para Oracle SQL*Net
+      - "5500:5500"  # Puerto para Oracle EM Express
+    environment:
+      ORACLE_PASSWORD: 1234
+      APP_USER: admin
+      APP_USER_PASSWORD: 1234
+      ORACLE_CHARACTERSET: AL32UTF8
+    volumes:
+      - oracle-data:/opt/oracle/oradata  # Persistencia de datos
+      - ./init.sql:/container-entrypoint-initdb.d/init.sql:ro  # Script de inicialización
+    restart: unless-stopped
+
+volumes:
+  oracle-data:

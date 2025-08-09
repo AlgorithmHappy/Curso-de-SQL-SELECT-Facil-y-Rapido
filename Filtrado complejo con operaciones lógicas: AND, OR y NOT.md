@@ -52,6 +52,7 @@ SELECT * FROM CURSOS WHERE (creador_id > 0 AND creador_id < 3) AND (TITULO = 'Di
 ```
 
 ## Notas:
+
 **Nota**: El uso de paréntesis es opcional.
 
 **Nota**: Se pueden realizar todas las combinaciones necesarias, sin importar su nivel de complejidad.
@@ -59,5 +60,25 @@ SELECT * FROM CURSOS WHERE (creador_id > 0 AND creador_id < 3) AND (TITULO = 'Di
 **Nota**: El operador mas ocupado y necesario es el **`AND`**
 
 ## Ejercicios:
-1. Devolver los registros de los usuarios que tengan como **"Nombre" "Luis Marquez"** ó en todo caso al usuario con **"id"** igual a 3.
-2. Devolver los registros de los usuarios con los correos **"ana@example.com"** y **"ana@example.com"**.
+
+1. Devolver los registros de los **"usuarios"** que tengan como **"Nombre" "Luis Marquez"** ó en todo caso al usuario con **"id"** igual a 3.
+
+2. Devolver los registros de los **"usuarios"** con los correos **"ana@example.com"** y **"ana@example.com"**.
+
+3. Devolver los registros de las **"categorias"** con el **"Nombre"** de **"Programación"** ademas de los **"id" "3"** y **"4"**.
+
+4. Devolver los registros de las **"insripciones"** del **"usuario"** con el **"id"** 3 y el **"curso"** con el **"id"** 1.
+
+5. Devolver los registros de los **"curso"** con el **"titulo"** de **"Curso de SQL Básico"** y el **"curso"** con el **"creador"** del **"id"** 2.
+
+6. Devolver los registros de los **"perfiles"** que no tengan el **"sitio web"** https://anaart.com, que tampoco tengan el **"usuario"** con el **"id"** 2 pero que si sea el **"registro"** con el **"id"** 1
+
+## Enlaces relacionados
+
+**GitHub**: <a class="postLinks" href="https://github.com/AlgorithmHappy/Curso-de-SQL-SELECT-Facil-y-Rapido/blob/main/Filtrado%20complejo%20con%20operaciones%20lógicas%3A%20AND%2C%20OR%20y%20NOT.md" target="_blank">Filtrado complejo con operaciones lógicas: AND, OR y NOT</a>
+
+**Pagina WEB**: <a class="postLinks" href="http://www.gerardomarquez.dev/blog/posts/Filtrado_complejo_con_operaciones_logicas_AND_OR_y_NOT" target="_blank">Filtrado complejo con operaciones lógicas: AND, OR y NOT</a>
+
+## APA
+
+Marquez Mendez, L. G. (2025, 8 de agosto). *Filtrado complejo con operaciones lógicas: AND, OR y NOT*. Recuperado de <span style="word-break: break-all;">http://www.gerardomarquez.dev/blog/posts/Filtrado_complejo_con_operaciones_logicas_AND_OR_y_NOT</span>

@@ -7,6 +7,7 @@ Aprende a realizar consultas SQL de forma clara y práctica. En este curso en es
 
 1. [¿Qué es SQL y DML? Estructura de una consulta con "Select"](¿Que%20es%20SQL%20y%20DML%3F%20Estructura%20de%20una%20consulta%20con%20Select.md)
 2. [Filtra datos con la cláusula "Where"](Filtra%20datos%20con%20la%20clausula%20Where.md)
+2. [Filtrado complejo con operaciones lógicas: AND, OR y NOT](Filtrado%20complejo%20con%20operaciones%20lógicas:%20AND,%20OR%20y%20NOT.md)
 
 ## Licencia
 Este proyecto está bajo la licencia [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/).  

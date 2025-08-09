@@ -3,9 +3,9 @@
 Si se **requiere realizar un filtrado más complejo** de las filas arrojadas por tu gestor de bases de datos, se pueden utilizar los operadores lógicos, con los cuales **es posible combinar filtros en la cláusula `WHERE`**.  
 Estos operadores son los siguientes:
 
-- **AND**: Filtra los datos que **cumplan todas las condiciones dadas**, sin excepción.
-- **OR**: Filtra los datos que **cumplan al menos una de las condiciones dadas**.
-- **NOT**: Filtra los datos que **NO cumplan** con las condiciones dadas.
+- **`AND`**: Filtra los datos que **cumplan todas las condiciones dadas**, sin excepción.
+- **`OR`**: Filtra los datos que **cumplan al menos una de las condiciones dadas**.
+- **`NOT`**: Filtra los datos que **NO cumplan** con las condiciones dadas.
 
 
 ## Consultas
@@ -37,7 +37,27 @@ SELECT * FROM INSCRIPCIONES WHERE NOT curso_id = 1;
 ```
 
 ## Combinar operadores
-Es posible la combinacion de operadores AND, OR y NOT en una misma clausula WHERE para realizar filtraciones con mas precision, sin embargo es recomendable utilizar parentesis para tener mejor legibilidad en estas operaciones.
-Ejemplos
+Es posible la combinacion de operadores **`AND`, `OR` y `NOT`** en una misma **cláusula `WHER`** para realizar filtraos con más precisos. Sin embargo, se recomienda el uso de **paréntesis para mejorar la legibilidad** y evitar ambigüedades en la evaluación de las condiciones.
 
-## Consultas
+Ejemplos:
+```sql
+SELECT * FROM INSCRIPCIONES WHERE (curso_id = 1 OR curso_id = 2) AND (usuario_id = 3);
+-- Esta consulta filtra las inscripciones para los cursos con ID 1 o 2,
+-- pero solo si el usuario tiene un ID igual a 3.
+
+SELECT * FROM CURSOS WHERE (creador_id > 0 AND creador_id < 3) AND (TITULO = 'Diseño UX/UI' OR titulo = 'Spring Boot Avanzado')
+-- Esta consulta filtra los cursos que como "creador_id" este entre
+-- el 1 y el 2 y que ademas el titulo del curso sea o "Diseño UX/UI"
+-- o "Spring Boot Avanzado"
+```
+
+## Notas:
+**Nota**: El uso de paréntesis es opcional.
+
+**Nota**: Se pueden realizar todas las combinaciones necesarias, sin importar su nivel de complejidad.
+
+**Nota**: El operador mas ocupado y necesario es el **`AND`**
+
+## Ejercicios:
+1. Devolver los registros de los usuarios que tengan como **"Nombre" "Luis Marquez"** ó en todo caso al usuario con **"id"** igual a 3.
+2. Devolver los registros de los usuarios con los correos **"ana@example.com"** y **"ana@example.com"**.

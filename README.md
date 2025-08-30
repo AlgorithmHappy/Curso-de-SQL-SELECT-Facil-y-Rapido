@@ -1,17 +1,18 @@
-# Curso-de-SQL-SELECT-Facil-y-Rapido
+# Curso de SQL SELECT Facil y Rapido
 
 ## Introducción
-Aprende a realizar consultas SQL de forma clara y práctica. En este curso en específico dominarás el uso de SELECT para extraer, filtrar, ordenar y agrupar datos desde bases de datos. Ideal para principiantes y quienes quieren reforzar sus conocimientos en consultas con SQL.
+Aprende a realizar consultas SQL de forma clara y práctica. En este curso dominarás el uso de **`SELEC`** para extraer, filtrar, ordenar y agrupar datos desde bases de datos. Ideal para principiantes y quienes quieren reforzar sus conocimientos en consultas con SQL.
 
 ## Índice de Contenidos
 
 1. [¿Qué es SQL y DML? Estructura de una consulta con "Select"](¿Que%20es%20SQL%20y%20DML%3F%20Estructura%20de%20una%20consulta%20con%20Select.md)
 2. [Filtra datos con la cláusula "Where"](Filtra%20datos%20con%20la%20clausula%20Where.md)
-2. [Filtrado complejo con operaciones lógicas: AND, OR y NOT](Filtrado%20complejo%20con%20operaciones%20logicas%20AND%20OR%20y%20NOT.md)
+3. [Filtrado complejo con operaciones lógicas: AND, OR y NOT](Filtrado%20complejo%20con%20operaciones%20logicas%20AND%20OR%20y%20NOT.md)
+4. [Filtrado de datos con el operador "LIKE"](Filtrado%20de%20datos%20con%20el%20operador%20LIKE.md)
 
-## Licencia
-Este proyecto está bajo la licencia [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/).  
-Puedes compartir y adaptar el contenido **siempre que des crédito y no lo uses con fines comerciales**.
+## Consideraciones
+
+En este curso trabajaremos con el gestor de bases de datos **Oracle**. Si bien el lenguaje SQL es estándar y puede utilizarse en diferentes gestores, existen pequeñas variaciones en la sintaxis que pueden hacer que cada sistema lo interprete de forma distinta, lo que en algunos casos podría generar errores.
 
 ## Base de datos utilizada:
 **Nota:** Ejecutar linea por linea, es decir desde que inicia la instruccion hasta donde esta el ";"
@@ -112,22 +113,62 @@ CREATE TABLE inscripciones (
 INSERT INTO usuarios (nombre, email) VALUES ('Luis Marquez', 'luis@example.com');
 INSERT INTO usuarios (nombre, email) VALUES ('Ana Torres', 'ana@example.com');
 INSERT INTO usuarios (nombre, email) VALUES ('Carlos Méndez', 'carlos@example.com');
+INSERT INTO usuarios (nombre, email) VALUES ('María López', 'maria@example.com');
+INSERT INTO usuarios (nombre, email) VALUES ('Jorge Rivera', 'jorge@example.com');
+INSERT INTO usuarios (nombre, email) VALUES ('Sofía Hernández', 'sofia@example.com');
+INSERT INTO usuarios (nombre, email) VALUES ('Ricardo Pérez', 'ricardo@example.com');
+INSERT INTO usuarios (nombre, email) VALUES ('Lucía Fernández', 'lucia@example.com');
+INSERT INTO usuarios (nombre, email) VALUES ('Andrés Gómez', 'andres@example.com');
+INSERT INTO usuarios (nombre, email) VALUES ('Verónica Díaz', 'veronica@example.com');
+INSERT INTO usuarios (nombre, email) VALUES ('Fernando Torres', 'fernando@example.com');
+INSERT INTO usuarios (nombre, email) VALUES ('Patricia Morales', 'patricia@example.com');
 
 -- Insertar perfiles (1:1)
 INSERT INTO perfiles (usuario_id, biografia, sitio_web) VALUES (1, 'Desarrollador fullstack', 'https://luis.dev');
 INSERT INTO perfiles (usuario_id, biografia, sitio_web) VALUES (2, 'Diseñadora gráfica', 'https://anaart.com');
+INSERT INTO perfiles (usuario_id, biografia, sitio_web) VALUES (3, 'Instructor de Java y mentor de estudiantes', 'https://carlos.learn');
+INSERT INTO perfiles (usuario_id, biografia, sitio_web) VALUES (4, 'Especialista en marketing digital', 'https://maria.marketing');
+INSERT INTO perfiles (usuario_id, biografia, sitio_web) VALUES (5, 'Emprendedor y consultor tecnológico', 'https://jorge.tech');
+INSERT INTO perfiles (usuario_id, biografia, sitio_web) VALUES (6, 'Diseñadora de interfaces web', 'https://sofia.design');
+INSERT INTO perfiles (usuario_id, biografia, sitio_web) VALUES (7, 'Experto en bases de datos', 'https://ricardo.db');
+INSERT INTO perfiles (usuario_id, biografia, sitio_web) VALUES (8, 'Desarrollador frontend', 'https://lucia.dev');
+INSERT INTO perfiles (usuario_id, biografia, sitio_web) VALUES (9, 'Instructor de Python y IA', 'https://andres.ai');
+INSERT INTO perfiles (usuario_id, biografia, sitio_web) VALUES (10, 'Diseñadora UX/UI avanzada', 'https://veronica.design');
+INSERT INTO perfiles (usuario_id, biografia, sitio_web) VALUES (11, 'Consultor de negocios tecnológicos', 'https://fernando.tech');
+INSERT INTO perfiles (usuario_id, biografia, sitio_web) VALUES (12, 'Especialista en ciberseguridad', 'https://patricia.sec');
 
 
 -- Insertar cursos (1:N)
 INSERT INTO cursos (titulo, descripcion, creador_id) VALUES ('Curso de SQL Básico', 'Aprende a consultar bases de datos.', 1);
 INSERT INTO cursos (titulo, descripcion, creador_id) VALUES ('Diseño UX/UI', 'Principios del diseño centrado en el usuario.', 2);
 INSERT INTO cursos (titulo, descripcion, creador_id) VALUES ('Spring Boot Avanzado', 'Desarrollo backend con Java y Spring.', 1);
+INSERT INTO cursos (titulo, descripcion, creador_id) VALUES ('Python para Principiantes', 'Aprende Python desde cero.', 3);
+INSERT INTO cursos (titulo, descripcion, creador_id) VALUES ('Marketing Avanzado', 'Estrategias de marketing digital.', 4);
+INSERT INTO cursos (titulo, descripcion, creador_id) VALUES ('Frontend con React', 'Desarrollo web moderno con React.', 8);
+INSERT INTO cursos (titulo, descripcion, creador_id) VALUES ('Base de Datos Oracle', 'Administración de bases de datos Oracle.', 7);
+INSERT INTO cursos (titulo, descripcion, creador_id) VALUES ('Inteligencia Artificial', 'Fundamentos de IA aplicada.', 9);
+INSERT INTO cursos (titulo, descripcion, creador_id) VALUES ('Ciberseguridad', 'Protege sistemas y datos de ataques.', 12);
+INSERT INTO cursos (titulo, descripcion, creador_id) VALUES ('Emprendimiento Tecnológico', 'Cómo crear tu startup tecnológica.', 5);
+INSERT INTO cursos (titulo, descripcion, creador_id) VALUES ('Diseño Avanzado UX/UI', 'Técnicas avanzadas de diseño centrado en usuario.', 10);
+INSERT INTO cursos (titulo, descripcion, creador_id) VALUES ('Java Intermedio', 'Profundiza en Java y patrones de diseño.', 3);
+INSERT INTO cursos (titulo, descripcion, creador_id) VALUES ('Spring Boot Microservicios', 'Arquitectura de microservicios con Spring Boot.', 1);
 
 -- Insertar categorías
-INSERT INTO categorias (nombre) VALUES ('Programación');
-INSERT INTO categorias (nombre) VALUES ('Diseño');
-INSERT INTO categorias (nombre) VALUES ('Backend');
-INSERT INTO categorias (nombre) VALUES ('Frontend');
+INSERT INTO cursos_categorias (curso_id, categoria_id) VALUES (1, 1);
+INSERT INTO cursos_categorias (curso_id, categoria_id) VALUES (1, 3);
+INSERT INTO cursos_categorias (curso_id, categoria_id) VALUES (2, 2);
+INSERT INTO cursos_categorias (curso_id, categoria_id) VALUES (3, 1);
+INSERT INTO cursos_categorias (curso_id, categoria_id) VALUES (3, 3);
+INSERT INTO cursos_categorias (curso_id, categoria_id) VALUES (4, 6); 
+INSERT INTO cursos_categorias (curso_id, categoria_id) VALUES (5, 5); 
+INSERT INTO cursos_categorias (curso_id, categoria_id) VALUES (6, 7); 
+INSERT INTO cursos_categorias (curso_id, categoria_id) VALUES (7, 3); 
+INSERT INTO cursos_categorias (curso_id, categoria_id) VALUES (8, 8); 
+INSERT INTO cursos_categorias (curso_id, categoria_id) VALUES (9, 9); 
+INSERT INTO cursos_categorias (curso_id, categoria_id) VALUES (10, 10);
+INSERT INTO cursos_categorias (curso_id, categoria_id) VALUES (11, 2);
+INSERT INTO cursos_categorias (curso_id, categoria_id) VALUES (12, 1);
+INSERT INTO cursos_categorias (curso_id, categoria_id) VALUES (13, 3);
 
 -- Relacionar cursos con categorías (N:N)
 INSERT INTO cursos_categorias (curso_id, categoria_id) VALUES (1, 1);
@@ -140,4 +181,32 @@ INSERT INTO cursos_categorias (curso_id, categoria_id) VALUES (3, 3);
 INSERT INTO inscripciones (usuario_id, curso_id, fecha_inscripcion) VALUES (2, 1, TO_DATE('2025-06-01', 'YYYY-MM-DD') );
 INSERT INTO inscripciones (usuario_id, curso_id, fecha_inscripcion) VALUES (3, 1, TO_DATE('2025-06-02', 'YYYY-MM-DD'));
 INSERT INTO inscripciones (usuario_id, curso_id, fecha_inscripcion) VALUES (3, 2, TO_DATE('2025-06-03', 'YYYY-MM-DD'));
+INSERT INTO inscripciones (usuario_id, curso_id, fecha_inscripcion) VALUES (4, 1, TO_DATE('2025-06-05', 'YYYY-MM-DD'));
+INSERT INTO inscripciones (usuario_id, curso_id, fecha_inscripcion) VALUES (5, 2, TO_DATE('2025-06-06', 'YYYY-MM-DD'));
+INSERT INTO inscripciones (usuario_id, curso_id, fecha_inscripcion) VALUES (6, 3, TO_DATE('2025-06-07', 'YYYY-MM-DD'));
+INSERT INTO inscripciones (usuario_id, curso_id, fecha_inscripcion) VALUES (7, 4, TO_DATE('2025-06-08', 'YYYY-MM-DD'));
+INSERT INTO inscripciones (usuario_id, curso_id, fecha_inscripcion) VALUES (8, 5, TO_DATE('2025-06-09', 'YYYY-MM-DD'));
+INSERT INTO inscripciones (usuario_id, curso_id, fecha_inscripcion) VALUES (9, 6, TO_DATE('2025-06-10', 'YYYY-MM-DD'));
+INSERT INTO inscripciones (usuario_id, curso_id, fecha_inscripcion) VALUES (10, 7, TO_DATE('2025-06-11', 'YYYY-MM-DD'));
+INSERT INTO inscripciones (usuario_id, curso_id, fecha_inscripcion) VALUES (11, 8, TO_DATE('2025-06-12', 'YYYY-MM-DD'));
+INSERT INTO inscripciones (usuario_id, curso_id, fecha_inscripcion) VALUES (12, 9, TO_DATE('2025-06-13', 'YYYY-MM-DD'));
+INSERT INTO inscripciones (usuario_id, curso_id, fecha_inscripcion) VALUES (1, 10, TO_DATE('2025-06-14', 'YYYY-MM-DD'));
+INSERT INTO inscripciones (usuario_id, curso_id, fecha_inscripcion) VALUES (2, 10, TO_DATE('2025-06-15', 'YYYY-MM-DD'));
+INSERT INTO inscripciones (usuario_id, curso_id, fecha_inscripcion) VALUES (3, 9, TO_DATE('2025-06-16', 'YYYY-MM-DD'));
+INSERT INTO inscripciones (usuario_id, curso_id, fecha_inscripcion) VALUES (4, 7, TO_DATE('2025-06-17', 'YYYY-MM-DD'));
+INSERT INTO inscripciones (usuario_id, curso_id, fecha_inscripcion) VALUES (5, 8, TO_DATE('2025-06-18', 'YYYY-MM-DD'));
+INSERT INTO inscripciones (usuario_id, curso_id, fecha_inscripcion) VALUES (6, 6, TO_DATE('2025-06-19', 'YYYY-MM-DD'));
 ```
+
+## Enlaces relacionados
+
+**GitHub**: <a class="postLinks" href="https://github.com/AlgorithmHappy/Curso-de-SQL-SELECT-Facil-y-Rapido" target="_blank">Curso de SQL SELECT Facil y Rapido</a>
+
+**Pagina WEB**: <a class="postLinks" href="http://www.gerardomarquez.dev/blog/posts/Curso_de_SQL_SELECT_Facil_y_Rapido" target="_blank">Curso de SQL SELECT Facil y Rapido</a>
+
+**YouTube**: <a class="postLinks" href="https://www.youtube.com/watch?v=Oh9TlzXZ01Q" target="_blank">Curso de SQL SELECT Facil y Rapido</a>
+
+## Licencia
+
+Este proyecto está bajo la licencia [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/).  
+Puedes compartir y adaptar el contenido **siempre que des crédito y no lo uses con fines comerciales**.

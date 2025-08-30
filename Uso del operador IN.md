@@ -1,0 +1,1 @@
+# Filtrado con el uso del operador IN

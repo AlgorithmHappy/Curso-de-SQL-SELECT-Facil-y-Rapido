@@ -61,7 +61,10 @@ SELECT * FROM cursos WHERE titulo LIKE '_Boot\%' ESCAPE '\';
 
 ## Enlaces relacionados
 
+**GitHub**: <a class="postLinks" href="https://github.com/AlgorithmHappy/Curso-de-SQL-SELECT-Facil-y-Rapido/blob/main/Filtrado%20de%20datos%20con%20el%20operador%20LIKE.md" target="_blank">Filtrado de datos con el operador LIKE</a>
 
+**Pagina WEB**: <a class="postLinks" href="http://www.gerardomarquez.dev/blog/posts/Filtrado_de_datos_con_el_operador_LIKE" target="_blank">Filtrado de datos con el operador LIKE</a>
 
 ## APA
 
+Marquez Mendez, L. G. (2025, 8 de agosto). *Filtrado de datos con el operador LIKE. Recuperado de <span style="word-break: break-all;">http://www.gerardomarquez.dev/blog/posts/Filtrado_de_datos_con_el_operador_LIKE</span>

@@ -9,6 +9,7 @@ Aprende a realizar consultas SQL de forma clara y práctica. En este curso domin
 2. [Filtra datos con la cláusula "Where"](Filtra%20datos%20con%20la%20clausula%20Where.md)
 3. [Filtrado complejo con operaciones lógicas: AND, OR y NOT](Filtrado%20complejo%20con%20operaciones%20logicas%20AND%20OR%20y%20NOT.md)
 4. [Filtrado de datos con el operador "LIKE"](Filtrado%20de%20datos%20con%20el%20operador%20LIKE.md)
+5. [Filtrado de datos con el operador "IN"](Filtrado%20de%20datos%20con%20el%20operador%20IN.md)
 
 ## Consideraciones
 

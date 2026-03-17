@@ -120,6 +120,10 @@ devolución constante en la consulta.
 
 ## Enlaces relacionados
 
-**GitHub**:
+**GitHub**: <a class="postLinks" href="https://github.com/AlgorithmHappy/Curso-de-SQL-SELECT-Facil-y-Rapido/blob/main/Filtrado%20de%20datos%20con%20el%20operador%20IN.md" target="_blank">Filtrado de datos con el operador IN</a>
+
+**Pagina WEB**: <a class="postLinks" href="http://www.gerardomarquez.dev/blog/posts/Filtrado_de_datos_con_el_operador_IN" target="_blank">Filtrado de datos con el operador IN</a>
 
 ## APA
+
+Marquez Mendez, L. G. (2025, 16 de marzo). *Filtrado de datos con el operador IN. Recuperado de <span style="word-break: break-all;">http://www.gerardomarquez.dev/blog/posts/Filtrado_de_datos_con_el_operador_IN</span>

@@ -1,5 +1,5 @@
 # ¿Que es SQL y DML?. Estructura de una consulta con "Select"
-## Definicion de SQL y DML
+## Definicion de SQL y DML prueba
 **SQL** son las siglas en inglés de *Structured Query Language*, que se traduce al español como **Lenguaje de Consulta Estructurado**. Es un lenguaje de programación *declarativo* que permite manipular grandes volúmenes de datos almacenados en una base de datos, mediante instrucciones específicas.
 **SQL** está compuesto por cuatro subconjuntos de comandos: **DML, DDL, DCL y TCL**. El subconjunto más utilizado es el **DML**.
 **DML** significa *Data Manipulation Language (Lenguaje de Manipulación de Datos)*. Este conjunto de comandos se utiliza para consultar y modificar los datos almacenados en las tablas de una base de datos, lo que lo convierte en el más usado en el día a día del trabajo con bases de datos.

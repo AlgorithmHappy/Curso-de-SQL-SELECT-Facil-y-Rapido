@@ -1,215 +1,279 @@
-# Curso de SQL SELECT Facil y Rapido
+<!DOCTYPE html>
+<html>
 
-## Introducción
-Aprende a realizar consultas SQL de forma clara y práctica. En este curso dominarás el uso de **`SELECT`** para extraer, filtrar, ordenar y agrupar datos desde bases de datos. Ideal para principiantes y quienes quieren reforzar sus conocimientos en consultas con SQL.
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="description" content="Ideas grow better together">
+<meta name="keywords" content="Collaborative, Markdown, Notes">
+<link rel="apple-touch-icon" sizes="180x180" href="http://localhost:3000/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:3000/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:3000/icons/favicon-16x16.png">
+<link rel="manifest" href="http://localhost:3000/icons/site.webmanifest">
+<link rel="mask-icon" href="http://localhost:3000/icons/safari-pinned-tab.svg" color="#b51f08">
+<link rel="shortcut icon" href="http://localhost:3000/icons/favicon.ico">
+<meta name="apple-mobile-web-app-title" content="HedgeDoc - Ideas grow better together">
+<meta name="application-name" content="HedgeDoc - Ideas grow better together">
+<meta name="msapplication-TileColor" content="#b51f08">
+<meta name="msapplication-config" content="http://localhost:3000/icons/browserconfig.xml">
+<meta name="theme-color" content="#b51f08">
 
-## Índice de Contenidos
+<meta property="og:title" content="HedgeDoc - Ideas grow better together">
+<meta property="og:description" content="Ideas grow better together">
+<meta property="og:type" content="website">
+<meta property="og:url" content="http://localhost:3000">
+<meta property="og:image" content="http://localhost:3000/icons/android-chrome-512x512.png">
+<meta property="og:image:alt" content="HedgeDoc logo">
+<meta property="og:image:type" content="image/png">
+<base href="http://localhost:3000/">
+<title>HedgeDoc - Ideas grow better together</title>
+<link href="build/font-pack.4362583c9249021b5028.css" rel="stylesheet"><link href="build/2.15c517ea2148f55c8206.css" rel="stylesheet"><link href="build/3.ec6e7d6280fcd73e729d.css" rel="stylesheet"><link href="build/cover-styles-pack.b648f312ee4d780e4818.css" rel="stylesheet"><link href="build/cover.e6dcfddabfc3aa3af727.css" rel="stylesheet">
 
-1. [¿Qué es SQL y DML? Estructura de una consulta con "Select"](¿Que%20es%20SQL%20y%20DML%3F%20Estructura%20de%20una%20consulta%20con%20Select.md)
-2. [Filtra datos con la cláusula "Where"](Filtra%20datos%20con%20la%20clausula%20Where.md)
-3. [Filtrado complejo con operaciones lógicas: AND, OR y NOT](Filtrado%20complejo%20con%20operaciones%20logicas%20AND%20OR%20y%20NOT.md)
-4. [Filtrado de datos con el operador "LIKE"](Filtrado%20de%20datos%20con%20el%20operador%20LIKE.md)
-5. [Filtrado de datos con el operador "IN"](Filtrado%20de%20datos%20con%20el%20operador%20IN.md)
+</head>
 
-## Consideraciones
+<body>
+    
+    <div class="site-wrapper">
+    <div class="site-wrapper-inner">
+        <div class="cover-container">
 
-En este curso trabajaremos con el gestor de bases de datos **Oracle**. Si bien el lenguaje SQL es estándar y puede utilizarse en diferentes gestores, existen pequeñas variaciones en la sintaxis que pueden hacer que cada sistema lo interprete de forma distinta, lo que en algunos casos podría generar errores.
+            <div class="masthead clearfix">
+                <div class="inner">
+                    <h3 class="masthead-brand"></h3>
+                    <nav>
+                        <ul class="nav masthead-nav">
+                            <li class="ui-home active"><a href="#">Intro</a>
+                            </li>
+                            <li class="ui-history"><a href="#">History</a>
+                            </li>
+                            <div class="ui-signin" style="float: right; margin-top: 8px;">
+                                
+                                <a type="button" href="http://localhost:3000/new" class="btn btn-sm btn-primary"><i class="fa fa-plus"></i> New guest note</a>
+                                
+                                
+                                <button class="btn btn-sm btn-success ui-signin" data-toggle="modal" data-target=".signin-modal">Sign In</button>
+                                
+                            </div>
+                            <div class="ui-signout" style="float: right; margin-top: 8px; display: none;">
+                                
+                                <a type="button" href="http://localhost:3000/new" class="btn btn-sm btn-primary"><i class="fa fa-plus"></i> New note</a>
+                                
+                                <span class="ui-profile dropdown pull-right">
+                                    <button id="profileLabel" class="btn btn-sm btn-link ui-profile-label" style="padding-right: 0;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <img class="ui-avatar" width="20" height="20"><span class="hidden-xs hidden-sm">&ensp;<span class="ui-name"></span></span>&ensp;<i class="fa fa-caret-down"></i>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="profileLabel">
+                                        <li><a href="http://localhost:3000/features"><i class="fa fa-dot-circle-o fa-fw"></i> Features</a></li>
+                                        <li><a href="http://localhost:3000/me/export"><i class="fa fa-cloud-download fa-fw"></i> Export user data</a></li>
+                                        <li><a class="ui-delete-user" data-toggle="modal" data-target=".delete-user-modal"><i class="fa fa-trash fa-fw"></i> Delete user</a></li>
+                                        <li><a href="http://localhost:3000/logout"><i class="fa fa-sign-out fa-fw"></i> Sign Out</a></li>
+                                    </ul>
+                                </span>
+                            </div>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
 
-## Base de datos utilizada:
-**Nota:** Ejecutar linea por linea, es decir desde que inicia la instruccion hasta donde esta el ";"
-```sql
--- Crear secuencias para las claves primarias
-CREATE SEQUENCE seq_usuarios START WITH 1 INCREMENT BY 1;
-CREATE SEQUENCE seq_perfiles START WITH 1 INCREMENT BY 1;
-CREATE SEQUENCE seq_cursos START WITH 1 INCREMENT BY 1;
-CREATE SEQUENCE seq_categorias START WITH 1 INCREMENT BY 1;
+            <div id="home" class="section">
+                <div class="inner cover">
+                    <h1 class="cover-heading"><img src="http://localhost:3000/banner/banner_vertical_color.svg" width="400" alt="HedgeDoc logo"></h1>
+                    <p class="lead">
+                        Ideas grow better together
+                    </p>
+                    
+                    
+                    
+                    <span class="ui-signin">
+                        <br>
+                        <a type="button" class="btn btn-lg btn-success ui-signin" data-toggle="modal" data-target=".signin-modal" style="min-width: 200px;">Sign In</a>
+                    </span>
+                    <span class="ui-or">or</span>
+                    
+                    <span class="ui-signin">
+                        <a type="button" href="http://localhost:3000/features" class="btn btn-lg btn-primary" style="min-width: 200px;">Explore all features</a>
+                        <br>
+                        <br>
+                        <img src="http://localhost:3000/screenshot.png" class="screenshot ui-signin">
+                    </span>
+                    <div class="lead row" style="width: 90%; margin: 0 auto;">
+                        <div class="col-md-4 inner">
+                            <a href="http://localhost:3000/features#Share-Notes">
+                                <i class="fa fa-bolt fa-3x"></i>
+                                <h4>Real time collaboration</h4>
+                            </a>
+                        </div>
+                        <div class="col-md-4 inner">
+                            <a href="http://localhost:3000/features#MathJax">
+                                <i class="fa fa-bar-chart fa-3x"></i>
+                                <h4>Works with charts and MathJax</h4>
+                            </a>
+                        </div>
+                        <div class="col-md-4 inner">
+                            <a href="http://localhost:3000/features#Slide-Mode">
+                                <i class="fa fa-tv fa-3x"></i>
+                                <h4>Supports slide mode</h4>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
--- Tabla: usuarios
-CREATE TABLE usuarios (
-    id NUMBER PRIMARY KEY,
-    nombre VARCHAR2(100),
-    email VARCHAR2(100) UNIQUE
-);
+            <div id="history" class="section" style="display:none;">
+                <div class="ui-signin">
+                    <p>Below is history from this browser</p>
+                </div>
+                <br>
+                <form class="form-inline">
+                    <div class="form-group" style="vertical-align: bottom;">
+                        <input class="form-control ui-use-tags" placeholder="Select tags…" />
+                    </div>
+                    <div class="form-group">
+                        <input class="search form-control" placeholder="Search keyword…" />
+                    </div>
+                    <a href="#" class="sort btn btn-default" data-sort="text" title="Sort by title">
+                    Title
+                    </a>
+                    <a href="#" class="sort btn btn-default" data-sort="timestamp" title="Sort by time">
+                    Time
+                    </a>
+                    <span class="hidden-xs hidden-sm">
+                        <a href="#" class="btn btn-default ui-save-history" title="Export history"><i class="fa fa-save"></i></a>
+                        <span class="btn btn-default btn-file ui-open-history" title="Import history">
+                            <i class="fa fa-folder-open-o"></i><input type="file" />
+                        </span>
+                    <a href="#" class="btn btn-default ui-clear-history" title="Clear history" data-toggle="modal" data-target=".delete-history-modal"><i class="fa fa-trash-o"></i></a>
+                    </span>
+                    <a href="#" class="btn btn-default ui-refresh-history" title="Refresh history"><i class="fa fa-refresh"></i></a>
+                </form>
+                <h4 class="ui-nohistory" style="display:none;">
+                    No history
+                </h4>
+                <a href="#" class="btn btn-primary ui-import-from-browser" style="display:none;">Import from browser</a>
+                <ul id="history-list" class="list">
+                </ul>
+                <ul class="pagination"></ul>
+            </div>
 
--- Trigger para ID automático en usuarios
-CREATE OR REPLACE TRIGGER trg_usuarios_id
-BEFORE INSERT ON usuarios
-FOR EACH ROW
-BEGIN
-    :new.id := seq_usuarios.NEXTVAL;
-END;
+            <div class="mastfoot">
+                <div class="inner">
+                    <select class="ui-locale"></select>
+                    <p>
+                        Powered by <a href="https://hedgedoc.org">HedgeDoc</a> | <a href="http://localhost:3000/s/release-notes" target="_blank" rel="noopener">Releases</a> | <a href="https://github.com/hedgedoc/hedgedoc/tree/b09975a3ba1191cc354112097236ca57eab763c8" target="_blank" rel="noopener">Source Code</a>
+                    </p>
+                    <h6 class="social-foot">
+                        Follow us on <a href="https://github.com/hedgedoc/hedgedoc" target="_blank" rel="noopener"><i class="fa fa-github"></i> GitHub</a>, <a href="https://community.hedgedoc.org" target="_blank" rel="noopener"><i class="fa fa-users" aria-hidden="true"></i> Discourse</a>, <a href="https://chat.hedgedoc.org" target="_blank" rel="noopener"><i class="fa fa-comments"></i> Matrix</a>, <a href="https://social.hedgedoc.org/mastodon" target="_blank" rel="noopener"><i class="fa fa-mastodon"></i> Mastodon</a>, and <a href="https://translate.hedgedoc.org" target="_blank" rel="noopener"><i class="fa fa-globe"></i> POEditor</a>.
+                    </h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- delete history modal -->
+<div class="modal fade delete-history-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">Are you sure?</h4>
+            </div>
+            <div class="modal-body">
+                <h5 class="ui-delete-history-modal-msg"></h5>
+                <strong class="ui-delete-history-modal-item"></strong>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-danger ui-delete-history-modal-confirm">Yes, do it!</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- delete user modal -->
+<div class="modal fade delete-user-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">Are you sure?</h4>
+            </div>
+            <div class="modal-body">
+                <h5 class="ui-delete-user-modal-msg">Do you really want to delete your user account?</h5>
+                <strong class="ui-delete-user-modal-item">This will delete your account, all notes that are owned by you and remove all references to your account from other notes.</strong>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default ui-delete-user-modal-cancel" data-dismiss="modal">Cancel</button>
+                <a type="button" class="btn btn-danger" href="http://localhost:3000/me/delete/">Yes, do it!</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- signin modal -->
+<div class="modal fade signin-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="mySmallModalLabel">Choose method</h4>
+            </div>
+            <div class="modal-body" style="text-align: center;">
+                
+                
+                
+                <a href="http://localhost:3000/auth/github" class="btn btn-lg btn-block btn-social btn-github">
+                    <i class="fa fa-github"></i> Sign in via GitHub
+                </a>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <hr>
+                
+                
+                <h4>Sign in via E-Mail</h4>
+                <form data-toggle="validator" role="form" class="form-horizontal" method="post" enctype="application/x-www-form-urlencoded">
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <input type="email" class="form-control" name="email" placeholder="E-Mail" required>
+                            <span class="help-block control-label with-errors" style="display: inline;"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <input type="password" class="form-control" name="password" placeholder="Password" required>
+                            <span class="help-block control-label with-errors" style="display: inline;"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <button type="submit" class="btn btn-primary" formaction="http://localhost:3000/login">Sign In</button>
+                            <button type="submit" class="btn btn-default" formaction="http://localhost:3000/register">Register</button>
+                        </div>
+                    </div>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+</div>
 
--- Tabla: perfiles (1:1 con usuarios)
-CREATE TABLE perfiles (
-    id NUMBER PRIMARY KEY,
-    usuario_id NUMBER UNIQUE,
-    biografia CLOB,
-    sitio_web VARCHAR2(255),
-    CONSTRAINT fk_perfil_usuario FOREIGN KEY (usuario_id) REFERENCES usuarios(id)
-);
 
-CREATE OR REPLACE TRIGGER trg_perfiles_id
-BEFORE INSERT ON perfiles
-FOR EACH ROW
-BEGIN
-    :new.id := seq_perfiles.NEXTVAL;
-END;
+    <script src="config"></script><script src="build/vendors~common.169150ab29b5b514fca5.js" defer="defer"></script><script src="build/common.81e0af3e4be743cc487b.js" defer="defer"></script><script src="build/vendors~cover~cover-pack~index~index-pack~pretty~pretty-pack~slide~slide-pack.bdd237381b0ec864bb3b.js" defer="defer"></script><script src="build/vendors~cover~cover-pack.de969007237a54acc688.js" defer="defer"></script><script src="build/cover-pack.9200c310357923ffb2b2.js" defer="defer"></script>
 
--- Tabla: cursos (1:N con usuarios)
-CREATE TABLE cursos (
-    id NUMBER PRIMARY KEY,
-    titulo VARCHAR2(150),
-    descripcion CLOB,
-    creador_id NUMBER,
-    CONSTRAINT fk_curso_creador FOREIGN KEY (creador_id) REFERENCES usuarios(id)
-);
+</body>
 
-CREATE OR REPLACE TRIGGER trg_cursos_id
-BEFORE INSERT ON cursos
-FOR EACH ROW
-BEGIN
-    :new.id := seq_cursos.NEXTVAL;
-END;
-
--- Tabla: categorias
-CREATE TABLE categorias (
-    id NUMBER PRIMARY KEY,
-    nombre VARCHAR2(50) UNIQUE
-);
-
-CREATE OR REPLACE TRIGGER trg_categorias_id
-BEFORE INSERT ON categorias
-FOR EACH ROW
-BEGIN
-    :new.id := seq_categorias.NEXTVAL;
-END;
-
--- Tabla intermedia: cursos_categorias (relación N:N)
-CREATE TABLE cursos_categorias (
-    curso_id NUMBER,
-    categoria_id NUMBER,
-    PRIMARY KEY (curso_id, categoria_id),
-    CONSTRAINT fk_cc_curso FOREIGN KEY (curso_id) REFERENCES cursos(id),
-    CONSTRAINT fk_cc_categoria FOREIGN KEY (categoria_id) REFERENCES categorias(id)
-);
-
-CREATE OR REPLACE TRIGGER trg_categorias_id
-BEFORE INSERT ON categorias
-FOR EACH ROW
-BEGIN
-    :new.id := seq_categorias.NEXTVAL;
-END;
-
--- Tabla: inscripciones (relación N:N entre usuarios y cursos)
-CREATE TABLE inscripciones (
-    usuario_id NUMBER,
-    curso_id NUMBER,
-    fecha_inscripcion DATE,
-    PRIMARY KEY (usuario_id, curso_id),
-    CONSTRAINT fk_insc_usuario FOREIGN KEY (usuario_id) REFERENCES usuarios(id),
-    CONSTRAINT fk_insc_curso FOREIGN KEY (curso_id) REFERENCES cursos(id)
-);
-
--- Insertar datos en usuarios
-INSERT INTO usuarios (nombre, email) VALUES ('Luis Marquez', 'luis@example.com');
-INSERT INTO usuarios (nombre, email) VALUES ('Ana Torres', 'ana@example.com');
-INSERT INTO usuarios (nombre, email) VALUES ('Carlos Méndez', 'carlos@example.com');
-INSERT INTO usuarios (nombre, email) VALUES ('María López', 'maria@example.com');
-INSERT INTO usuarios (nombre, email) VALUES ('Jorge Rivera', 'jorge@example.com');
-INSERT INTO usuarios (nombre, email) VALUES ('Sofía Hernández', 'sofia@example.com');
-INSERT INTO usuarios (nombre, email) VALUES ('Ricardo Pérez', 'ricardo@example.com');
-INSERT INTO usuarios (nombre, email) VALUES ('Lucía Fernández', 'lucia@example.com');
-INSERT INTO usuarios (nombre, email) VALUES ('Andrés Gómez', 'andres@example.com');
-INSERT INTO usuarios (nombre, email) VALUES ('Verónica Díaz', 'veronica@example.com');
-INSERT INTO usuarios (nombre, email) VALUES ('Fernando Torres', 'fernando@example.com');
-INSERT INTO usuarios (nombre, email) VALUES ('Patricia Morales', 'patricia@example.com');
-
--- Insertar perfiles (1:1)
-INSERT INTO perfiles (usuario_id, biografia, sitio_web) VALUES (1, 'Desarrollador fullstack', 'https://luis.dev');
-INSERT INTO perfiles (usuario_id, biografia, sitio_web) VALUES (2, 'Diseñadora gráfica', 'https://anaart.com');
-INSERT INTO perfiles (usuario_id, biografia, sitio_web) VALUES (3, 'Instructor de Java y mentor de estudiantes', 'https://carlos.learn');
-INSERT INTO perfiles (usuario_id, biografia, sitio_web) VALUES (4, 'Especialista en marketing digital', 'https://maria.marketing');
-INSERT INTO perfiles (usuario_id, biografia, sitio_web) VALUES (5, 'Emprendedor y consultor tecnológico', 'https://jorge.tech');
-INSERT INTO perfiles (usuario_id, biografia, sitio_web) VALUES (6, 'Diseñadora de interfaces web', 'https://sofia.design');
-INSERT INTO perfiles (usuario_id, biografia, sitio_web) VALUES (7, 'Experto en bases de datos', 'https://ricardo.db');
-INSERT INTO perfiles (usuario_id, biografia, sitio_web) VALUES (8, 'Desarrollador frontend', 'https://lucia.dev');
-INSERT INTO perfiles (usuario_id, biografia, sitio_web) VALUES (9, 'Instructor de Python y IA', 'https://andres.ai');
-INSERT INTO perfiles (usuario_id, biografia, sitio_web) VALUES (10, 'Diseñadora UX/UI avanzada', 'https://veronica.design');
-INSERT INTO perfiles (usuario_id, biografia, sitio_web) VALUES (11, 'Consultor de negocios tecnológicos', 'https://fernando.tech');
-INSERT INTO perfiles (usuario_id, biografia, sitio_web) VALUES (12, 'Especialista en ciberseguridad', 'https://patricia.sec');
-
-
--- Insertar cursos (1:N)
-INSERT INTO cursos (titulo, descripcion, creador_id) VALUES ('Curso de SQL Básico', 'Aprende a consultar bases de datos.', 1);
-INSERT INTO cursos (titulo, descripcion, creador_id) VALUES ('Diseño UX/UI', 'Principios del diseño centrado en el usuario.', 2);
-INSERT INTO cursos (titulo, descripcion, creador_id) VALUES ('Spring Boot Avanzado', 'Desarrollo backend con Java y Spring.', 1);
-INSERT INTO cursos (titulo, descripcion, creador_id) VALUES ('Python para Principiantes', 'Aprende Python desde cero.', 3);
-INSERT INTO cursos (titulo, descripcion, creador_id) VALUES ('Marketing Avanzado', 'Estrategias de marketing digital.', 4);
-INSERT INTO cursos (titulo, descripcion, creador_id) VALUES ('Frontend con React', 'Desarrollo web moderno con React.', 8);
-INSERT INTO cursos (titulo, descripcion, creador_id) VALUES ('Base de Datos Oracle', 'Administración de bases de datos Oracle.', 7);
-INSERT INTO cursos (titulo, descripcion, creador_id) VALUES ('Inteligencia Artificial', 'Fundamentos de IA aplicada.', 9);
-INSERT INTO cursos (titulo, descripcion, creador_id) VALUES ('Ciberseguridad', 'Protege sistemas y datos de ataques.', 12);
-INSERT INTO cursos (titulo, descripcion, creador_id) VALUES ('Emprendimiento Tecnológico', 'Cómo crear tu startup tecnológica.', 5);
-INSERT INTO cursos (titulo, descripcion, creador_id) VALUES ('Diseño Avanzado UX/UI', 'Técnicas avanzadas de diseño centrado en usuario.', 10);
-INSERT INTO cursos (titulo, descripcion, creador_id) VALUES ('Java Intermedio', 'Profundiza en Java y patrones de diseño.', 3);
-INSERT INTO cursos (titulo, descripcion, creador_id) VALUES ('Spring Boot Microservicios', 'Arquitectura de microservicios con Spring Boot.', 1);
-
--- Insertar categorías
-INSERT INTO cursos_categorias (curso_id, categoria_id) VALUES (1, 1);
-INSERT INTO cursos_categorias (curso_id, categoria_id) VALUES (1, 3);
-INSERT INTO cursos_categorias (curso_id, categoria_id) VALUES (2, 2);
-INSERT INTO cursos_categorias (curso_id, categoria_id) VALUES (3, 1);
-INSERT INTO cursos_categorias (curso_id, categoria_id) VALUES (3, 3);
-INSERT INTO cursos_categorias (curso_id, categoria_id) VALUES (4, 6); 
-INSERT INTO cursos_categorias (curso_id, categoria_id) VALUES (5, 5); 
-INSERT INTO cursos_categorias (curso_id, categoria_id) VALUES (6, 7); 
-INSERT INTO cursos_categorias (curso_id, categoria_id) VALUES (7, 3); 
-INSERT INTO cursos_categorias (curso_id, categoria_id) VALUES (8, 8); 
-INSERT INTO cursos_categorias (curso_id, categoria_id) VALUES (9, 9); 
-INSERT INTO cursos_categorias (curso_id, categoria_id) VALUES (10, 10);
-INSERT INTO cursos_categorias (curso_id, categoria_id) VALUES (11, 2);
-INSERT INTO cursos_categorias (curso_id, categoria_id) VALUES (12, 1);
-INSERT INTO cursos_categorias (curso_id, categoria_id) VALUES (13, 3);
-
--- Relacionar cursos con categorías (N:N)
-INSERT INTO cursos_categorias (curso_id, categoria_id) VALUES (1, 1);
-INSERT INTO cursos_categorias (curso_id, categoria_id) VALUES (1, 3);
-INSERT INTO cursos_categorias (curso_id, categoria_id) VALUES (2, 2);
-INSERT INTO cursos_categorias (curso_id, categoria_id) VALUES (3, 1);
-INSERT INTO cursos_categorias (curso_id, categoria_id) VALUES (3, 3);
-
--- Inscripciones de usuarios a cursos (N:N)
-INSERT INTO inscripciones (usuario_id, curso_id, fecha_inscripcion) VALUES (2, 1, TO_DATE('2025-06-01', 'YYYY-MM-DD') );
-INSERT INTO inscripciones (usuario_id, curso_id, fecha_inscripcion) VALUES (3, 1, TO_DATE('2025-06-02', 'YYYY-MM-DD'));
-INSERT INTO inscripciones (usuario_id, curso_id, fecha_inscripcion) VALUES (3, 2, TO_DATE('2025-06-03', 'YYYY-MM-DD'));
-INSERT INTO inscripciones (usuario_id, curso_id, fecha_inscripcion) VALUES (4, 1, TO_DATE('2025-06-05', 'YYYY-MM-DD'));
-INSERT INTO inscripciones (usuario_id, curso_id, fecha_inscripcion) VALUES (5, 2, TO_DATE('2025-06-06', 'YYYY-MM-DD'));
-INSERT INTO inscripciones (usuario_id, curso_id, fecha_inscripcion) VALUES (6, 3, TO_DATE('2025-06-07', 'YYYY-MM-DD'));
-INSERT INTO inscripciones (usuario_id, curso_id, fecha_inscripcion) VALUES (7, 4, TO_DATE('2025-06-08', 'YYYY-MM-DD'));
-INSERT INTO inscripciones (usuario_id, curso_id, fecha_inscripcion) VALUES (8, 5, TO_DATE('2025-06-09', 'YYYY-MM-DD'));
-INSERT INTO inscripciones (usuario_id, curso_id, fecha_inscripcion) VALUES (9, 6, TO_DATE('2025-06-10', 'YYYY-MM-DD'));
-INSERT INTO inscripciones (usuario_id, curso_id, fecha_inscripcion) VALUES (10, 7, TO_DATE('2025-06-11', 'YYYY-MM-DD'));
-INSERT INTO inscripciones (usuario_id, curso_id, fecha_inscripcion) VALUES (11, 8, TO_DATE('2025-06-12', 'YYYY-MM-DD'));
-INSERT INTO inscripciones (usuario_id, curso_id, fecha_inscripcion) VALUES (12, 9, TO_DATE('2025-06-13', 'YYYY-MM-DD'));
-INSERT INTO inscripciones (usuario_id, curso_id, fecha_inscripcion) VALUES (1, 10, TO_DATE('2025-06-14', 'YYYY-MM-DD'));
-INSERT INTO inscripciones (usuario_id, curso_id, fecha_inscripcion) VALUES (2, 10, TO_DATE('2025-06-15', 'YYYY-MM-DD'));
-INSERT INTO inscripciones (usuario_id, curso_id, fecha_inscripcion) VALUES (3, 9, TO_DATE('2025-06-16', 'YYYY-MM-DD'));
-INSERT INTO inscripciones (usuario_id, curso_id, fecha_inscripcion) VALUES (4, 7, TO_DATE('2025-06-17', 'YYYY-MM-DD'));
-INSERT INTO inscripciones (usuario_id, curso_id, fecha_inscripcion) VALUES (5, 8, TO_DATE('2025-06-18', 'YYYY-MM-DD'));
-INSERT INTO inscripciones (usuario_id, curso_id, fecha_inscripcion) VALUES (6, 6, TO_DATE('2025-06-19', 'YYYY-MM-DD'));
-```
-
-## Enlaces relacionados
-
-**GitHub**: <a class="postLinks" href="https://github.com/AlgorithmHappy/Curso-de-SQL-SELECT-Facil-y-Rapido" target="_blank">Curso de SQL SELECT Facil y Rapido</a>
-
-**Pagina WEB**: <a class="postLinks" href="http://www.gerardomarquez.dev/blog/posts/Curso_de_SQL_SELECT_Facil_y_Rapido" target="_blank">Curso de SQL SELECT Facil y Rapido</a>
-
-**YouTube**: <a class="postLinks" href="https://www.youtube.com/watch?v=Oh9TlzXZ01Q" target="_blank">Curso de SQL SELECT Facil y Rapido</a>
-
-## Licencia
-
-Este proyecto está bajo la licencia [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/).  
-Puedes compartir y adaptar el contenido **siempre que des crédito y no lo uses con fines comerciales**.
-
-prueba 5
+</html>

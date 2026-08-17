@@ -1,3 +1,13 @@
+---
+
+title: Curso de SQL SELECT Facil y Rapido
+tags:
+  - Azure
+  - DevOps
+description: Aprende SQL desde cero con ejemplos reales y domina SELECT, WHERE, LIKE e IN de forma rápida y práctica.
+
+---
+
 # Curso de SQL SELECT Facil y Rapido
 
 ## Introducción
@@ -211,5 +221,3 @@ INSERT INTO inscripciones (usuario_id, curso_id, fecha_inscripcion) VALUES (6, 6
 
 Este proyecto está bajo la licencia [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/).  
 Puedes compartir y adaptar el contenido **siempre que des crédito y no lo uses con fines comerciales**.
-
-prueba 14

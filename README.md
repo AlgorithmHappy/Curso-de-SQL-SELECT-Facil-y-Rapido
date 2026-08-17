@@ -2,8 +2,11 @@
 
 title: Curso de SQL SELECT Facil y Rapido
 tags:
-  - Azure
-  - DevOps
+  - SQL
+  - Backend
+  - Curso
+  - Base de datos
+  - Query
 description: Aprende SQL desde cero con ejemplos reales y domina SELECT, WHERE, LIKE e IN de forma rápida y práctica.
 
 ---

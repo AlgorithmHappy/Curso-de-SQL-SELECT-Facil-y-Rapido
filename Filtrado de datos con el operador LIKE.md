@@ -1,3 +1,25 @@
+---
+
+title: Filtra datos con la cláusula "Where"
+tags:
+  - SQL
+  - Backend
+  - Curso
+  - Base de datos
+  - Query
+date: 2025-07-17T14:30:00
+readDuration: 4
+description: Este artículo explica de forma clara y práctica cómo usar la cláusula WHERE en SQL para filtrar datos según condiciones específicas. Aprenderás a utilizar operadores de comparación con números y textos.
+tags:
+  - SQL
+  - Backend
+  - Curso
+  - Base de datos
+  - Query
+image: https://r-charts.com/es/miscelanea/procesamiento-imagenes-magick_files/figure-html/color-fondo-imagen-r.png
+
+---
+
 # Filtrado de datos con el operador `LIKE`
 
 **`LIKE`** es un **operador** que se utiliza con **`WHERE`** para el **filtrado de datos de tipo texto** (varchar, string)

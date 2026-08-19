@@ -1,30 +1,24 @@
 ---
 
-title: Filtra datos con la cláusula "Where"
+title: ¿Qué es SQL y DML? Estructura de una consulta con "Select"
 tags:
   - SQL
   - Backend
   - Curso
   - Base de datos
   - Query
-date: 2025-07-17T14:30:00
+date: 2025-08-08T14:30:00
 readDuration: 4
-description: Este artículo explica de forma clara y práctica cómo usar la cláusula WHERE en SQL para filtrar datos según condiciones específicas. Aprenderás a utilizar operadores de comparación con números y textos.
-tags:
-  - SQL
-  - Backend
-  - Curso
-  - Base de datos
-  - Query
+description: Aprende a usar WHERE en SQL para filtrar datos de forma clara, práctica y sencilla.
 image: https://r-charts.com/es/miscelanea/procesamiento-imagenes-magick_files/figure-html/color-fondo-imagen-r.png
 
 ---
 
-# ¿Que es SQL y DML?. Estructura de una consulta con "Select"
-## Definicion de SQL y DML prueba
+# ¿Qué es SQL y DML? Estructura de una consulta con "Select"
+## Definicion de SQL y DML
 **SQL** son las siglas en inglés de *Structured Query Language*, que se traduce al español como **Lenguaje de Consulta Estructurado**. Es un lenguaje de programación *declarativo* que permite manipular grandes volúmenes de datos almacenados en una base de datos, mediante instrucciones específicas.
 **SQL** está compuesto por cuatro subconjuntos de comandos: **DML, DDL, DCL y TCL**. El subconjunto más utilizado es el **DML**.
-**DML** significa *Data Manipulation Language (Lenguaje de Manipulación de Datos)*. Este conjunto de comandos se utiliza para consultar y modificar los datos almacenados en las tablas de una base de datos, lo que lo convierte en el más usado en el día a día del trabajo con bases de datos.
+**DML** significa *Data Manipulation Language (Lenguaje de Manipulación de Datos)*. Este conjunto de comandos se utiliza para consultar y modificar los datos almacenados en las tablas de una base de datos, lo que lo convierte en el más usado en el trabajo diario con bases de datos.
 Los principales comandos de **DML** son:
 - **SELECT**: *para consultar datos de una tabla*
 - **INSERT**: *para insertar nuevos registros*
@@ -34,13 +28,13 @@ Los principales comandos de **DML** son:
 En este curso nos enfocaremos exclusivamente en el comando **SELECT** y en todo lo que se puede lograr con él.
 
 ### Glosario
-- **Lenguaje de programacion**: Un lenguaje de programación es una herramienta que permite a los seres humanos "comunicarse" con una computadora para darle instrucciones. Estas instrucciones pueden utilizarse para crear software (aplicaciones) que pueden ser usados por personas a través de distintos dispositivos.
+- **Lenguaje de programación**: Un lenguaje de programación es una herramienta que permite a los seres humanos "comunicarse" con una computadora para darle instrucciones. Estas instrucciones pueden utilizarse para crear software (aplicaciones) que pueden ser usados por personas a través de distintos dispositivos.
 - **Declarativo**: Es un tipo de lenguaje de programación cuyo enfoque está en describir lo que se quiere lograr, en lugar de explicar cómo hacerlo paso a paso. En otras palabras, su semántica se basa en el *"qué" se desea obtener, no en el "cómo" se debe ejecutar*.
 - **Comando**: Es la instrucción más básica que se le puede dar a una computadora para que realice una acción específica.
-- **Base de datos**: Es un software (aplicacion) que permite la gestion de una gran cantidad de datos.
+- **Base de datos**: Es un software (aplicación) que permite la gestión de una gran cantidad de datos.
 
 ## Primera consulta
-La consulta mas basica que se puede realizar es:
+La consulta más básica que se puede realizar es:
 ```sql
 SELECT email FROM usuarios;
 -- La palabra "SELECT" indica las columnas que quieres de la tabla, con el "FROM" indicas que tabla de la base de datos quieres y con el ";" indicas que hasta ahi acaba la instruccion.
@@ -48,7 +42,7 @@ SELECT email FROM usuarios;
 SELECT nombre, email FROM usuarios;
 -- Si deseas consultar varias columnas puedes separar por coma cada una de las columnas que quieras.
 
--- Si quisieramos traducir estas linea a lenguaje humano yo las traduciria asi "Selecciona la columna email desde la tabla usuarios"
+-- Si quisiéramos traducir estas líneas a lenguaje humano, yo las traduciría así: "Selecciona la columna email desde la tabla usuarios"
 ```
 
 ### Variante
@@ -66,17 +60,17 @@ ORA-00942: table or view does not exist"
 ## Ejercicios:
 1. *Consulta todos los datos de la tabla "CURSOS"*
 2. *Consulta las columnas "BIOGRAFIA" y "SITIO_WEB" de la tabla "PERFILES"*
-3. *¿Que columnas tiene la tabla "INSCRIPCIONES"?*
-4. *¿Que cursos existen en la base de datos?*
+3. *¿Qué columnas tiene la tabla "INSCRIPCIONES"?*
+4. *¿Qué cursos existen en la base de datos?*
 
 ## Enlaces relacionados
 
-**GitHub**: <a class="postLinks" href="https://github.com/AlgorithmHappy/Curso-de-SQL-SELECT-Facil-y-Rapido/blob/main/¿Que%20es%20SQL%20y%20DML%3F%20Estructura%20de%20una%20consulta%20con%20Select.md" target="_blank">¿Que es SQL y DML?. Estructura de una consulta con "Select"</a>
+**GitHub**: <a class="postLinks" href="https://github.com/AlgorithmHappy/Curso-de-SQL-SELECT-Facil-y-Rapido/blob/main/¿Que%20es%20SQL%20y%20DML%3F%20Estructura%20de%20una%20consulta%20con%20Select.md" target="_blank">¿Qué es SQL y DML? Estructura de una consulta con "Select"</a>
 
-**Pagina WEB**: <a class="postLinks" href="http://www.gerardomarquez.dev/blog/posts/Que_es_SQL_y_DML_Estructura_de_una_consulta_con_Select" target="_blank">¿Que es SQL y DML?. Estructura de una consulta con "Select"</a>
+**Página WEB**: <a class="postLinks" href="http://www.gerardomarquez.dev/blog/posts/Que_es_SQL_y_DML_Estructura_de_una_consulta_con_Select" target="_blank">¿Qué es SQL y DML? Estructura de una consulta con "Select"</a>
 
 **YouTube**: <a class="postLinks" href="https://www.youtube.com/watch?v=Oh9TlzXZ01Q&t=23s" target="_blank">Curso de SQL "SELECT" Facil y Rapido cap 1</a>
 
 ## APA
 
-Marquez Mendez, L. G. (2025, 8 de agosto). *¿Que es SQL y DML?. Estructura de una consulta con "Select"*. Recuperado de <span style="word-break: break-all;">https://www.gerardomarquez.dev/blog/posts/Que_es_SQL_y_DML_Estructura_de_una_consulta_con_Select</span>
+Marquez Mendez, L. G. (2025, 8 de agosto). *¿Qué es SQL y DML? Estructura de una consulta con "Select"*. Recuperado de <span style="word-break: break-all;">https://www.gerardomarquez.dev/blog/posts/Que_es_SQL_y_DML_Estructura_de_una_consulta_con_Select</span>

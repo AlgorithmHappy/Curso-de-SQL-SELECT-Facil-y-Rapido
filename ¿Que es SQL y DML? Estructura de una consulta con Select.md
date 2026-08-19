@@ -7,7 +7,7 @@ tags:
   - Curso
   - Base de datos
   - Query
-date: 2025-08-08T14:30:00
+date: 2025-08-08T22:02:00
 readDuration: 4
 description: Aprende a usar WHERE en SQL para filtrar datos de forma clara, práctica y sencilla.
 image: https://r-charts.com/es/miscelanea/procesamiento-imagenes-magick_files/figure-html/color-fondo-imagen-r.png

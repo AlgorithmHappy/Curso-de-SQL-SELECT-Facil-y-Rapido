@@ -7,7 +7,7 @@ tags:
   - Curso
   - Base de datos
   - Query
-date: 2025-08-08T14:30:00
+date: 2025-08-08T23:43:00
 readDuration: 4
 description: Este artículo explica de forma clara y práctica cómo usar la cláusula WHERE en SQL para filtrar datos según condiciones específicas. Aprenderás a utilizar operadores de comparación con números y textos.
 

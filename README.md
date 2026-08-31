@@ -1,6 +1,6 @@
 ---
 
-title: Curso de SQL SELECT Facil y Rapido
+title: Curso de SQL "SELECT" Facil y Rapido
 tags:
   - SQL
   - Backend
@@ -10,7 +10,7 @@ tags:
 date: 2025-06-18T22:32:00
 readDuration: 60
 description: Aprende SQL desde cero con ejemplos reales y domina SELECT, WHERE, LIKE e IN de forma rápida y práctica.
-
+image: https://raw.githubusercontent.com/AlgorithmHappy/Curso-de-SQL-SELECT-Facil-y-Rapido/refs/heads/main/images/Curso%20de%20SQL%20SELECT%20Facil%20y%20Rapido.webp
 
 ---
 

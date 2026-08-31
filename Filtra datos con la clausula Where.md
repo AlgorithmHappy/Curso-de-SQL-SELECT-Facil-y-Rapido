@@ -10,6 +10,7 @@ tags:
 date: 2025-08-08T23:43:00
 readDuration: 4
 description: Este artículo explica de forma clara y práctica cómo usar la cláusula WHERE en SQL para filtrar datos según condiciones específicas. Aprenderás a utilizar operadores de comparación con números y textos.
+image: https://raw.githubusercontent.com/AlgorithmHappy/Curso-de-SQL-SELECT-Facil-y-Rapido/refs/heads/main/images/Filtra%20datos%20con%20la%20cl%C3%A1usula%20Where.webp
 
 ---
 

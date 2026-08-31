@@ -1,5 +1,6 @@
 ---
 
+title: Filtrado de datos con el operador "LIKE"
 tags:
   - SQL
   - Backend
@@ -7,7 +8,9 @@ tags:
   - Base de datos
   - Query
 date: 2025-07-17T14:30:00
-image: https://r-charts.com/es/miscelanea/procesamiento-imagenes-magick_files/figure-html/color-fondo-imagen-r.png
+readDuration: 20
+description: Aprende a filtrar texto en SQL usando LIKE, comodines y patrones de búsqueda.
+image: https://raw.githubusercontent.com/AlgorithmHappy/Curso-de-SQL-SELECT-Facil-y-Rapido/refs/heads/main/images/Filtrado%20de%20datos%20con%20el%20operador%20LIKE.webp
 
 ---
 

@@ -1,6 +1,6 @@
 ---
 
-title: ¿Qué es SQL y DML? Estructura de una consulta con "Select"
+title: ¿Qué es SQL y DML?. Estructura de una consulta con "Select"
 tags:
   - SQL
   - Backend
@@ -10,11 +10,11 @@ tags:
 date: 2025-08-08T22:02:00
 readDuration: 4
 description: Aprende a usar WHERE en SQL para filtrar datos de forma clara, práctica y sencilla.
-image: https://r-charts.com/es/miscelanea/procesamiento-imagenes-magick_files/figure-html/color-fondo-imagen-r.png
+image: https://raw.githubusercontent.com/AlgorithmHappy/Curso-de-SQL-SELECT-Facil-y-Rapido/refs/heads/main/images/Que%20es%20SQL%20y%20DML%20Estructura%20de%20una%20consulta%20con%20Select.webp
 
 ---
 
-# ¿Qué es SQL y DML? Estructura de una consulta con "Select"
+# ¿Qué es SQL y DML?. Estructura de una consulta con "Select"
 ## Definicion de SQL y DML
 **SQL** son las siglas en inglés de *Structured Query Language*, que se traduce al español como **Lenguaje de Consulta Estructurado**. Es un lenguaje de programación *declarativo* que permite manipular grandes volúmenes de datos almacenados en una base de datos, mediante instrucciones específicas.
 **SQL** está compuesto por cuatro subconjuntos de comandos: **DML, DDL, DCL y TCL**. El subconjunto más utilizado es el **DML**.

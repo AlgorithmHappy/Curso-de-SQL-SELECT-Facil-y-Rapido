@@ -1,16 +1,16 @@
 ---
 
-title: Filtra datos con la cláusula "Where"
+title: Filtrado de datos con el operador "IN"
 tags:
   - SQL
   - Backend
   - Curso
   - Base de datos
   - Query
-date: 2025-07-17T14:30:00
+date: 2025-03-16T14:30:00
 readDuration: 4
-description: Este artículo explica de forma clara y práctica cómo usar la cláusula WHERE en SQL para filtrar datos según condiciones específicas. Aprenderás a utilizar operadores de comparación con números y textos.
-image: https://r-charts.com/es/miscelanea/procesamiento-imagenes-magick_files/figure-html/color-fondo-imagen-r.png
+description: Aprende a filtrar datos en SQL con IN, NOT IN y subconsultas de forma eficiente.
+image: https://raw.githubusercontent.com/AlgorithmHappy/Curso-de-SQL-SELECT-Facil-y-Rapido/refs/heads/main/images/Filtrado%20de%20datos%20con%20el%20operador%20IN.webp
 
 ---
 # Filtrado de datos con el operador `IN`

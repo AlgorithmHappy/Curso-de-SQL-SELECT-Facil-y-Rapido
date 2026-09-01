@@ -7,7 +7,7 @@ tags:
   - Curso
   - Base de datos
   - Query
-date: 2025-06-18T22:32:00
+date: 2025-08-01T22:32:00
 readDuration: 60
 description: Aprende SQL desde cero con ejemplos reales y domina SELECT, WHERE, LIKE e IN de forma rápida y práctica.
 image: https://raw.githubusercontent.com/AlgorithmHappy/Curso-de-SQL-SELECT-Facil-y-Rapido/refs/heads/main/images/Curso%20de%20SQL%20SELECT%20Facil%20y%20Rapido.webp
